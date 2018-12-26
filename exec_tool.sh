@@ -15,6 +15,9 @@ case "$(uname -s)" in
   Linux)
     readonly HOST_PLATFORM="linux-x64"
     ;;
+  MSYS_NT-10.0)
+    readonly HOST_PLATFORM="win"
+    ;;
   *)
     echo "Unknown operating system. Cannot run ${TOOL_NAME}."
     exit 1

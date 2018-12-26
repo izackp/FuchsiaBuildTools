@@ -5,7 +5,10 @@
 
 set -e
 
-readonly SCRIPT_ROOT="$(cd $(dirname ${BASH_SOURCE[0]} ) && pwd)"
+readonly SCRIPT_ROOT="$(dirname ${BASH_SOURCE[0]} )"
 readonly TOOL_NAME=$(basename "$0")
 
+echo "${BASH_SOURCE[0]}"
+echo "$($(dirname ${BASH_SOURCE[0]} ) && pwd)"
+echo "${SCRIPT_ROOT}"
 source "${SCRIPT_ROOT}/exec_tool.sh"
